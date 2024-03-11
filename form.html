@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sumberdaya/css/form.css">
+</head>
+<body>
+    <main>
+        <h1>
+            Formulir Pendaftaran 
+        </h1>
+        <form action="">
+            <div class="parent-field">
+                <div class="field">
+                    <label for="nama">Nama</label><br>
+                    <input type="text" id="nama" placeholder="Nama lengkap"><br>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="Email aktif"><br>
+                </div>
+            </div>
+            <div class="parent-field">
+                <div class="field">
+                    <label for="nomer_telpon">No Hp</label><br>
+                    <input type="text" id="nomer_telpon" placeholder="No Hp aktif"><br>
+                </div>
+                <div class="field">
+                    <label for="prodi">Prodi</label><br>
+                    <select name="prodi" id="prodi">
+                        <option value="">Pilih Prodi</option>
+                        <option value="teknik_informatika">Teknik Informatika</option>
+                        <option value="teknik_mesin">Teknik Mesin</option>
+                        <option value="teknik_industri">Teknik Industri</option>
+                        <option value="teknik_industri">Sistem Informasi</option>
+                        <option value="teknik_industri">Teknik Elektro</option>
+                    </select><br>
+                </div>
+            </div>
+            <div class="parent-field">
+                <div class="field-choese">
+                    <label for="jenis_kelamin">Jenis Kelamin</label> <br>
+                    <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="Laki-laki">Laki-laki <br>
+                    <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="Perempuan">Perempuan <br>
+                </div>
+                <div class="field-choese">
+                    <label for="hobi">Hobi</label><br>
+                    <input type="checkbox" name="hobi" id="hobi">Membaca <br>
+                    <input type="checkbox" name="hobi" id="hobi">Menulis <br>
+                    <input type="checkbox" name="hobi" id="hobi">Menyanyi <br>
+                    <input type="checkbox" name="hobi" id="hobi">Olahraga <br>
+                </div>
+            </div>
+            <div class="parent-field">
+                <div class="field">
+                    <label for="alamat">Alamat</label><br>
+                    <textarea name="" id="alamat" cols="20" rows="10" placeholder="Alamat lengkap"></textarea><br>
+                </div>
+                <div class="field">
+        
+                    <label for="foto_diri">Foto Diri</label><br>
+                    <input type="file" name="" id="foto_diri"><br>
+                </div>
+            </div>
+            <div class="parent-field-tombol">
+                <div class="field-tombol">
+                    <a type="button">Daftar</a>
+                </div>
+                <div class="field-tombol">
+                    <a type="button" href="index.html">Kembali</a>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

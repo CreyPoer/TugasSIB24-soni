@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+#navbar {
+    background-color: transparent; 
+    transition: background-color 0.5s ease; 
+}
+header {
+    opacity: 0;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.3));
+    transform: translateY(-20px);
+    transition: opacity 1s, transform 2s;
+}
+.isidalamhome{
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.3));
+    color: white;
+    text-align: center;
+    margin-top: -25rem;
+}
+.isidalamhome a{
+    text-decoration: none;
+}
+header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#navbar.scrolled {
+    background-color: black; /* Atur warna latar belakang navbar saat di-scroll */
+}
+nav{
+    width:95%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    position:fixed;
+    z-index: 1000;
+}
+nav h3{
+    color: white;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content:space-between;
+    padding-top: 0.1rem;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li {
+    padding: 5px 20px;
+}
+nav ul li button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* .redupkan-gambar {
+    filter: brightness(70%); 
+} */
+.deskripsitentangkami{
+    width: 35rem;
+    padding-top: 0.5rem;
+}
+.deskripsitentangkami p{
+    text-align: justify;
+}
+header{
+    margin-top:-30rem;
+    text-align: center;
+    color: rgb(248, 245, 245);
+}
+
+.btn-header{
+    background: none;
+    color:white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-header:hover {
+    background:white;
+    border: 2px solid black;
+    color: black;
+}
+.tentangkami{
+    margin-top:20rem;
+    padding-bottom: 2rem;
+}
+.judultentangkami{
+    text-align: center;
+}
+.maintentangkami{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 40px;
+}
+.gambartentangkami{
+    padding-left: 5rem;
+}
+.gambartentangkami.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.gambartentangkami img{
+    border-radius: 20px;
+}
+.gambartentangkami img:hover{
+    box-shadow: 1px 5px 7px grey;
+}
+.tawaran{
+    padding: 5px 40px;
+    padding-bottom: 2rem;
+}
+.judultawaran{
+    text-align: center;
+}
+.katalogtawaran{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.wisata{
+    padding: 3rem;
+    width: 10rem;
+    position: relative;
+}
+.tulisandalamgambar {
+    padding-left: 10rem;
+    width: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Pilihan warna sesuai kebutuhan */
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease-in-out; /* Animasi perubahan opacity */
+}
+.wisata:hover .tulisandalamgambar {
+    opacity: 1; /* Tampilkan kelas tulisandalamgambar saat kursor mengarah ke gambar */
+}
+.wisata img {
+    filter: blur(0); /* Efek kabur pada gambar */
+    transition: filter 0.3s ease-in-out; /* Animasi perubahan efek kabur */
+}
+.wisata:hover img {
+    filter: blur(5px); /* Hilangkan efek kabur saat kursor mengarah ke gambar */
+}
+.isislide{
+    margin-top: -31rem;
+    text-align: center;
+    min-width:650px;
+}
+.judulslidewisata{
+    border-radius: 20px 20px 0px 0px;
+    width: 54%;
+    margin-left: 17.5rem;
+    color: white;
+    background-color: black;
+}
+.isislide img{
+    border:2px solid black;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+
+.slides{
+    width: 100%;
+    position: relative;
+  }
+  
+  .slides .isislide{
+    display: none;
+  }
+  
+  .slides .isislide img{
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  .isislide img{
+    height: 25rem;
+  }
+  .slides .navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+  
+  .slides .navigation .prev, .slides .navigation .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    /* user-select: none; */
+    transition: 0.9s ease;
+  }
+  
+  .slides .navigation .prev:hover, .slides .navigation .next:hover{
+    background: rgba(0,0,0,1);
+  }
+
+
+
+.slides-header{
+    width: 100%;
+    position: relative;
+  }
+  
+  .slides-header .slide{
+    display: none;
+  }
+  
+  .slides-header .slide img{
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  .slides-header .navigation-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .slides-header .navigation-header .prev, .slides-header .navigation-header .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    /* user-select: none; */
+    transition: 0.9s ease;
+  }
+  
+  .slides-header .navigation-header .prev:hover, .slides-header .navigation-header .next:hover{
+    background: rgba(0,0,0,1);
+  }
+
+
+
+
+
+
+.mainkontak{
+    display: flex;
+    padding: 5px 40px;
+    justify-content: space-between;
+}
+.kontak{
+    padding-top: 0rem;
+}
+.formkontak{
+    padding: 15px;
+    width: 70%;
+}
+input{
+    width: 100%;height: 2rem;
+}
+.inputemail{
+    width: 98%;height: 2rem;
+}
+.form-set{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.formulir{
+    display: flex;
+    padding: 20px 0px;
+}
+.form-50{
+    width: 45%;
+}
+textarea{
+    width: 100%;
+}
+.tombol{
+    padding: 20px 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.selainformkontak{
+    padding-top:15px;
+    padding-left:15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.lokasi{
+    width: 100%;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
