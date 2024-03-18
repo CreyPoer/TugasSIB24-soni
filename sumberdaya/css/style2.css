@@ -70,9 +70,6 @@ nav ul li button:hover {
     color: black;
 }
 
-/* .redupkan-gambar {
-    filter: brightness(70%); 
-} */
 .deskripsitentangkami{
     width: 35rem;
     padding-top: 0.5rem;
@@ -204,14 +201,17 @@ header{
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 65%;
   }
   
   .slides .navigation .prev, .slides .navigation .next{
+    text-align: center;
     cursor: pointer;
-    padding: 16px;
+    width: 2rem;
+    padding: 10px 14px;
+    border-radius: 50px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     background: rgba(0,0,0,0.2);
     /* user-select: none; */
@@ -244,23 +244,41 @@ header{
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
   }
   
   .slides-header .navigation-header .prev, .slides-header .navigation-header .next{
+    text-align: center;
     cursor: pointer;
-    padding: 16px;
+    width: 2rem;
+    padding: 10px 14px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
+    border-radius: 50px;
     background: rgba(0,0,0,0.2);
-    /* user-select: none; */
     transition: 0.9s ease;
   }
   
   .slides-header .navigation-header .prev:hover, .slides-header .navigation-header .next:hover{
     background: rgba(0,0,0,1);
   }
+
+  .slides-header .navigation-header .dot {
+    height: 15px;
+    width: 15px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.slides-header .navigation-header .active, 
+.slides-header .navigation-header .dot:hover {
+    background-color: white;
+}
+
 
 
 
