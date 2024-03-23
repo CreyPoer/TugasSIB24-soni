@@ -1,0 +1,297 @@
+/* CSS nya productarray.html dan productapi.html */
+body{
+    margin: 0;
+    background-color: white;
+}
+#navbar {
+    background-color: black; 
+}
+nav{
+    width:95%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    position:fixed;
+    z-index: 1000;
+}
+nav h3{
+    color: white;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content:space-between;
+    padding-top: 0.1rem;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li {
+    padding: 5px 20px;
+}
+nav ul li button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: white;
+    color: black;
+}
+.head{
+    position:relative;
+    text-align: center;
+}
+.head h1{
+    color: white;
+    margin-top: -10rem;
+    font-size: 6rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0px 0px 3px black;
+}
+.kalimat span {
+    border: 1px solid black; /* Menambahkan border hitam 1px */
+    padding: 0 5px; /* Memberikan sedikit ruang di sekitar kata */
+}
+main .content{
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    width: 95%;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+}
+.gambarisicontent{
+    margin: 0;
+    padding: 0;
+    -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+.gambarisicontent img{
+    width: 100%;
+    height: 15rem;
+    border-radius: 30px 30px 0px 0px;
+    transition: transform 0.3s ease;
+}
+.isicontent:hover .gambarisicontent img {
+    margin-top: 0.2rem;
+    margin-left: -0.1rem;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 7px black;
+}
+.isicontent:hover .gambarisicontent{
+    -webkit-mask-image:none;
+    mask-image:none;
+}
+.isicontent{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: 2px solid black ;
+    border-radius: 35px;
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform 1s ease,background-color 0.3s ease, color 0.3s ease;
+}
+#error{
+    color: red; display: none;
+}
+#tomboledit{
+    background-color: rgb(76, 76, 241);
+}
+.modiform h2{
+    padding-left: 0.6rem;
+}
+#tombolhapus{
+    background-color: red;
+}
+.empty-data{
+    padding-top: 1rem;
+    width:100%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.empty-data button{
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    font-size: 1rem;
+    padding: 10px;
+}
+.empty-data button:hover{
+    color: black;
+    background-color: white;
+}
+
+body:hover .isicontent {
+    transform: translateY(0);
+    width: auto;
+}
+
+.isicontent:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 4px 4px 7px black;
+    width: auto;
+}
+.deskripsiisicontent{
+    margin-top: -2rem;
+    padding: 1rem 1.5rem;
+}
+.tomboldetail button{
+    width: 150px;
+    padding:1rem;
+    background-color: white;
+    border-radius:20px;
+    transition: background-color 0.3s ease, color 0.3s ease, width 0.5s linear;
+}
+.tomboldetail button:active {
+    transform: translateY(4px);
+}
+.tomboldetail2 button:active {
+    transform: translateY(4px);
+}
+.isicontent:hover .tomboldetail button{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.tomboldetail2 button{
+    margin-top: 0.5rem;
+    width: 75px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, width 0.5s linear;
+}
+.tomboldetail2{
+    display: none;
+}
+.isicontent:hover .tomboldetail2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2px;
+}
+.isicontent:hover .tomboldetail2 button{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.modif,.modif2{
+    background-color: black;
+    display: none;
+    padding: 10px 0px;
+    width: auto;
+}
+.modiform{
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    margin: 10px;
+    padding: 5px 20px;
+}
+.modiform input{
+    margin-top: 5px;
+    padding: 5px;
+    width: 99%;
+    height: 1rem;
+}
+.modiform textarea{
+    margin-top: 5px;
+    width: 100%;
+}
+.modiform div{
+    padding: 10px;
+}
+.modiform button{
+    padding: 5px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+}
+footer{
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/* tablet */
+@media (min-width:768px) and (max-width:992px) {
+    body{
+        padding: 0px 10px;
+    }
+    .head h1{
+        font-size: 3rem;
+        padding-bottom: 7rem;
+    }
+    main .content{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .content .isicontent{
+        width: auto;
+    }
+    .isicontent:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 4px 4px 7px black;
+        width: auto;
+    }
+    footer{
+        margin-top: 1rem;
+    }
+    
+}
+@media (max-width:768px){
+    body{
+        padding: 0px 10px;
+    }
+    .head h1{
+        padding-top: 3rem;
+        font-size: 2.5rem;
+        padding-bottom: 5rem;
+    }
+    .head img{
+        height: 15rem;
+    }
+    main .content{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .content .isicontent{
+        width: auto;
+    }
+    .isicontent:hover {
+        width: auto;
+        background-color: white;
+        color: black;
+        box-shadow: 4px 4px 7px black;
+    }
+    footer{
+        margin-top: 1rem;
+    }
+}
