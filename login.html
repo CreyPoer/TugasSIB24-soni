@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sumberdaya/css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h3>MOSI</h3>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <button type="button">Daftar Sekarang</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content">
+            <div class="slidelogin">
+                <div class="slide">
+                    <img src="./sumberdaya/img/download.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./sumberdaya/img/javascript.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./sumberdaya/img/registrasi.jpeg" alt="" >
+                </div>
+                <div class="navigation-header">
+                    <a class = "prev" onclick = "plusSlidesheader(-1)">&#10094;</a>
+                    <div class="span-slide">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <a class = "next" onclick = "plusSlidesheader(-1)">&#10095;</a>
+                  </div>
+            </div>
+            <div class="formlogin">
+                <div class="judulformlogin">
+                    <h1>WELCOME to MOSI</h1> <span><b>Miracle Of Salt Island</b></span>
+                    <p> Sudah siap mengeksplore wisata di Pulau Madura bersama kami ?</p>
+                </div>
+                <form action="">
+                    <div class="inputformlogin">
+                        <label for="email" id="emailLabel">Email</label><br>
+                        <input type="email" name="email" id="emailInput" placeholder="Email">
+                    </div>
+                    <div class="inputformlogin">
+                        <label for="password" id="passwordLabel">Password</label><br>
+                        <input type="password" name="password" id="passwordInput" placeholder="Password">
+                    </div>
+                    <div class="tombolformlogin">
+                        <button type="submit" id="login" class="tombolmasuk"><b>Masuk</b></button>
+                        <button type="submit" id="daftar" class="tomboldaftar"><b>Daftar</b></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h1>MOSI</h1>
+    </footer>
+</body>
+<script>
+    const emailInput = document.getElementById('emailInput');
+    const emailLabel = document.getElementById('emailLabel');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordLabel = document.getElementById('passwordLabel');
+
+    emailInput.addEventListener('focus', function() {
+        emailLabel.style.display = 'block';
+    });
+    passwordInput.addEventListener('focus', function() {
+        passwordLabel.style.display = 'block';
+    });
+
+    emailInput.addEventListener('blur', function() {
+        if (this.value === '') {
+            emailLabel.style.display = 'none';
+        }
+    });
+    passwordInput.addEventListener('blur', function() {
+        if (this.value === '') {
+            passwordLabel.style.display = 'none';
+        }
+    });
+
+
+    var slideIndex = 1;
+    showSlidesheader(slideIndex);
+    startSlideInterval(); // Mulai interval otomatis
+
+    function plusSlidesheader(n) {
+    showSlidesheader(slideIndex += n);
+    stopSlideInterval(); // Berhenti interval saat slide bergeser
+    }
+
+    function currentSlide(n) {
+    showSlidesheader(slideIndex = n);
+    stopSlideInterval(); // Berhenti interval saat slide dipilih
+    }
+
+    function showSlidesheader(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active"); 
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active"); 
+    }
+
+    function startSlideInterval() {
+        slideInterval = setInterval(function() {
+            plusSlidesheader(1); 
+        }, 5000); 
+    }
+
+    function stopSlideInterval() {
+        clearInterval(slideInterval);
+    }
+
+    window.onload = function() {
+        showSlidesheader(slideIndex);
+        startSlideInterval();
+    };
+
+
+</script>
+</html>

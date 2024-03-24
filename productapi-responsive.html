@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sumberdaya/css/product.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h3>MOSI</h3>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <button type="button">Daftar Sekarang</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="head">
+        <img src="./sumberdaya/img/gambarhead.jpeg" alt="" width="100%" height="300rem">
+        <span><h1>WISATA MADURA</h1></span>
+    </div>
+    <main>
+        <div class="content" id="content">
+        </div>
+        <div class="empty-data">
+            <button class="button is-success" onclick="tambahWisata()">Tambah Wisata</button>
+        </div>
+        <div class="modif" id="modif">
+            <div class="modiform">
+                <h2>Form Tambah Wisata</h2>
+                <form action="" onsubmit="tambah_wisata(event)">
+                    <div>
+                        <label for="nama">Nama Tempat Wisata</label><br>
+                        <input type="text" id="nama" placeholder="Taman Paseban">
+                    </div>
+                    <div>
+                        <label for="htm">Harga Tiket Masuk</label><br>
+                        <input type="text" id="htm" placeholder="10000">
+                    </div>
+                    <div>
+                        <label for="linkgambar">Link Gambar Wisata</label><br>
+                        <input type="text" id="linkgambar" placeholder="Copy Paste link alamat gambar">
+                    </div>
+                    <div>
+                        <label for="deskripsi">Deskripsi Wisata</label><br>
+                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10" oninput="validateTextarea()"></textarea>
+                        <p id="error">Tidak boleh mengandung karakter enter!</p>
+                    </div>
+                    <div class="tombolform">
+                        <button type="submit" value="tambah" id="tambah">Tambah Wisata</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modif2" id="modif2">
+
+        </div>
+    </main>
+    <footer>
+        <h1>MOSI</h1>
+    </footer>
+</body>
+<script src="./sumberdaya/js/productapi.js"></script>
+</html>

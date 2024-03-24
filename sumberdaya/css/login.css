@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+#navbar {
+    background-color: black; 
+}
+nav{
+    width:auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px;
+    position:relative;
+    z-index: 1000;
+}
+nav h3{
+    color: white;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content:space-between;
+    padding-top: 0.1rem;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li {
+    padding: 5px 20px;
+}
+nav ul li button{
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+}
+
+nav ul li button:hover {
+    background-color: white;
+    color: black;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    padding:2rem  0rem;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+main .content{
+    height: 30rem;
+    display: flex;
+    width: auto;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+
+
+
+
+.slide{
+    height: auto;
+    width: auto;
+}
+.slidelogin{
+    position: relative;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    border-radius: 20px 0px 0px 20px;
+  }
+  
+  .slidelogin .slide{
+    display: none;
+  }
+  
+  .slidelogin .slide img{
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  .slidelogin .navigation-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .slidelogin .navigation-header .prev, .slidelogin .navigation-header .next{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.2);
+    transition: 0.9s ease;
+  }
+  
+  .slidelogin .navigation-header .prev:hover, .slidelogin .navigation-header .next:hover{
+    background: rgba(0,0,0,1);
+  }
+
+  
+  .slidelogin .navigation-header .dot {
+    height: 15px;
+    width: 15px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.slidelogin .navigation-header .active, 
+.slidelogin .navigation-header .dot:hover {
+    background-color: white;
+}
+
+img{
+    position: relative;
+    width:50rem;
+    height:30rem;
+    border-radius: 20px 0px 0px 20px;
+}
+.judulformlogin{
+    text-align: center;
+}
+
+.formlogin{
+    padding: 1rem;
+    width: auto;
+}
+.formlogin form{
+    width: auto;
+}
+
+.formlogin form .inputformlogin{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.inputformlogin label {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.inputformlogin input {
+    width: 95%;
+    height: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.inputformlogin input:focus {
+    border-radius:0px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+
+.inputformlogin input:focus + label {
+    display: block;
+    transform: translateY(-20px);
+    font-size: 12px;
+}
+/* .formlogin form .inputformlogin input{
+    width: 20rem;
+    height: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+} */
+/* input:focus::placeholder {
+    color: transparent;
+} */
+.tombolformlogin{
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-around;
+}
+.tombolformlogin button{
+    background-color: white;
+    border: 2px solid black;
+    padding: 1rem;
+    width: 48%;
+    border-radius: 30px;
+}
+.tombolformlogin button:hover{
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+}
+
+footer{
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+}
