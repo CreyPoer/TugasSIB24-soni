@@ -230,7 +230,7 @@ footer{
 }
 
 /* tablet */
-@media (min-width:768px) and (max-width:992px) {
+@media (min-width:768px) and (max-width:1024px) {
     body{
         padding: 0px 10px;
     }
@@ -239,10 +239,11 @@ footer{
         padding-bottom: 7rem;
     }
     main .content{
-        display: flex;
         margin: 0;
         padding: 0;
-        width: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         flex-wrap: wrap;
         justify-content:space-evenly;
         align-items: center;
@@ -261,7 +262,12 @@ footer{
     }
     
 }
+
+/* Handphone */
 @media (max-width:768px){
+    nav{
+        padding-left: 2rem;
+    }
     body{
         padding: 0px 10px;
     }

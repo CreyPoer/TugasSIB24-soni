@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sumberdaya/css/product.css">
+    <link rel="stylesheet" href="./sumberdaya/css/login.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,8 +19,58 @@
         </ul>
     </nav>
 
+    <main>
+        <div class="content">
+            <div class="slidelogin">
+                <div class="slide">
+                    <img src="./sumberdaya/img/objekwisata.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./sumberdaya/img/wisataalam.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./sumberdaya/img/wisatareligi.jpeg" alt="" >
+                </div>
+                <div class="slide">
+                    <img src="./sumberdaya/img/wisatakuliner.webp" alt="">
+                </div>
+                <div class="navigation-header">
+                    <a class = "prev" onclick = "plusSlidesheader(-1)">&#10094;</a>
+                    <div class="span-slide">
+                        <span class="dot" onclick="currentSlide(1)">Objek Wista</span>
+                        <span class="dot" onclick="currentSlide(2)">Wisata Alam</span>
+                        <span class="dot" onclick="currentSlide(3)">Wisata Religi</span>
+                        <span class="dot" onclick="currentSlide(3)">Wisata Kuliner</span>
+                    </div>
+                    <a class = "next" onclick = "plusSlidesheader(-1)">&#10095;</a>
+                  </div>
+            </div>
+            <div class="formlogin">
+                <div class="judulformlogin">
+                    <h1>WELCOME to MOSI</h1> <span><b>Miracle Of Salt Island</b></span>
+                    <p> Sudah siap mengeksplore wisata di Pulau Madura bersama kami ?</p>
+                </div>
+                <form action="">
+                    <div class="inputformlogin">
+                        <label for="email" id="emailLabel">Email</label><br>
+                        <input type="email" name="email" id="emailInput" placeholder="Email">
+                    </div>
+                    <div class="inputformlogin">
+                        <label for="password" id="passwordLabel">Password</label><br>
+                        <input type="password" name="password" id="passwordInput" placeholder="Password">
+                    </div>
+                    <div class="tombolformlogin">
+                        <button type="submit" id="login" class="tombolmasuk"><b>Masuk</b></button>
+                        <button type="submit" id="daftar" class="tomboldaftar"><b>Daftar</b></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <h1>MOSI</h1>
     </footer>
 </body>
+<script src="./sumberdaya/js/login.js"></script>
 </html>
