@@ -1,4 +1,4 @@
-var endpointUrl = "https://crudcrud.com/api/8912c9f0c1414edfa9a10a7b1d599073/wisata";
+var endpointUrl = "https://crudcrud.com/api/41453c355c5441e5bf6fe843b88fb80a/wisata";
 let konten = document.getElementById('content');
 let modif = document.getElementById('modif');
 let modif2 = document.getElementById('modif2');
