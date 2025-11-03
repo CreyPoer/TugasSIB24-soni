@@ -1,4 +1,4 @@
-var endpointUrl = "https://crudcrud.com/api/b45d08826546434e86b6d4f941d6a4a5/wisata";
+var endpointUrl = "https://crudcrud.com/api/f5bad55ed61245378120142311f83657/wisata";
 let konten = document.getElementById('content');
 let modif = document.getElementById('modif');
 let modif2 = document.getElementById('modif2');
@@ -45,7 +45,7 @@ function editWisata(endpoint,id,nama_wisata,linkgambar,htm,deskripsi) {
                     <input type="text" id="edit_htm" name="htm" value="${htm}">
                 </div>
                 <div>
-                    <label for="linkgambar">Link Gambar Wisata</label><br>
+                    <label for="linkgambar">Masukkan Nama File Gambar Wisata</label><br>
                     <input type="text" id="edit_linkgambar" value="${linkgambar}" name="linkgambar" >
                 </div>
                 <div>
@@ -89,10 +89,15 @@ fetch(endpointUrl)
             `;
         } else {
             data.forEach(element => {
+                let imgSrc = element.linkgambar || '';
+                if (!imgSrc.match(/^(https?:\/\/|data:|\/|\.\/|sumberdaya\/)/i)) {
+                    imgSrc = 'sumberdaya/img/' + imgSrc;
+                }
+
                 konten.innerHTML += `
                 <div class="isicontent">
                     <div class="gambarisicontent">
-                        <img src="${element.linkgambar}" alt="">
+                        <img src="${imgSrc}" alt="">
                     </div>
                     <div class="deskripsiisicontent">
                         <h2>${element.nama_wisata}</h2>
